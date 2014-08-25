@@ -78,7 +78,12 @@ def transicion(text, h): #siquesi
                 d[(x,y)] = float(h[(x,y)]) / t
     return d
 
-            
+def random (x,y,cantidad):
+    import random
+    num = random.choice([x,y])
+    cantidad = random.choice([1,len(cantidad)+1])
+
+    return num,cantidad
 
 
 
