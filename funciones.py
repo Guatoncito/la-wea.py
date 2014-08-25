@@ -72,6 +72,8 @@ def transicion(text, h): #siquesi
             x, y = k
             if x == palabra:
                 t += float(v)
+                if t == 0:
+                    return d
         for k, v in h.items():
             x, y = k
             if x == palabra:
