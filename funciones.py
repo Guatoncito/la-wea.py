@@ -26,7 +26,7 @@ def palabras(text): #siquesi
     texto = open(text)      
     words = list()    
     for linea in texto:
-        palabras = linea.strip().split()
+        palabras = linea.strip().split(' ')
         for palabra in palabras:
             if palabra not in words:
                 words.append(palabra)
@@ -36,7 +36,7 @@ def palabra_despues_otra_cantidad(text, p1, p2): #siquesi
     texto = open(text)
     cantidad = 0
     for linea in texto:
-        palabras = linea.strip().split()
+        palabras = linea.strip().split(' ')
         for i in range(len(palabras)-1):
             if palabras[i] == p1 and palabras[i+1] == p2:
                 cantidad += 1
