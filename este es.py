@@ -1,2 +1,8 @@
 from funciones import *
-Palabras = palabras('texto_a_leer.txt')
+import random
+
+Random=palabras('texto_a_leer.txt')
+Texto=open('texto_generado.txt','w')
+palabra_inicial=Random[random.random()*10]
+write(palabra_inicial)
+
