@@ -80,8 +80,8 @@ def transicion(text, h): #siquesi
 
 def random (x,y,cantidad):
     import random
-    num = random.choice([x,y])
-    cantidad = random.choice([1,len(cantidad)+1])
+    num = random.choice(range(x,y))
+    cantidad = random.choice(range(1,cantidad+1))
 
     return num,cantidad
 
