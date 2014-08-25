@@ -6,3 +6,5 @@ Texto=open('texto_generado.txt','w')
 palabra_inicial=Random[randrange(len(Random))]
 write(palabra_inicial)
 
+while True:
+
