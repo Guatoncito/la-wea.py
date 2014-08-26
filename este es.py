@@ -1,5 +1,5 @@
 from funciones import *
-import random
+from random import *
 
 Random=palabras('texto_a_leer.txt')
 Texto=open('texto_generado.txt','w')
