@@ -8,10 +8,16 @@ write(palabra_inicial)
 h=histograma('texto_a_leer.txt')
 tran=transicion('texto_a_leer.txt',h)
 palabra_actual=palabra_inicial
+cont=0
 while True:
 	a=palabra_despues_otra_posibilidad('texto_a_leer.txt',palabra_actual)
-	b=dict()
-	tot=0
-	for i in a.values():
-		tot+=i
-	
+	b=list()
+	for i in a:
+		for x in range(a[i]):
+			b.append(i)
+	palabra_actual=choice(b)
+	Texto.write(palabra_actual)
+	cont+=1
+	if cont==50:
+		break
+Texto.close()

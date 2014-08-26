@@ -9,6 +9,7 @@ def cantidad_letras(text): #nope
                     cantidad[palabra[i:i+1]] = 1
                 elif palabra[i:i+1] in cantidad:
                     cantidad[palabra[i:i+1]] += 1
+    close(texto)
     return cantidad
 
 def letra_despues_otra_cantidad(text, l1, l2): # nope
@@ -20,6 +21,7 @@ def letra_despues_otra_cantidad(text, l1, l2): # nope
             for i in range(len(palabra)-1):
                 if palabra[i] == l1 and palabra[i+1] == l2:
                     cantidad += 1
+    close(texto)
     return cantidad
 
 def palabras(text): #siquesi
@@ -30,6 +32,7 @@ def palabras(text): #siquesi
         for palabra in palabras:
             if palabra not in words:
                 words.append(palabra)
+    close(texto)
     return words
         
 def palabra_despues_otra_cantidad(text, p1, p2): #siquesi
@@ -40,6 +43,7 @@ def palabra_despues_otra_cantidad(text, p1, p2): #siquesi
         for i in range(len(palabras)-1):
             if palabras[i] == p1 and palabras[i+1] == p2:
                 cantidad += 1
+    close(texto)
     return cantidad
 
 def palabra_despues_otra_posibilidades(text, p1): #siquesi
@@ -53,6 +57,7 @@ def palabra_despues_otra_posibilidades(text, p1): #siquesi
                     words[palabras[i+1]] = 1
                 elif palabras[i+1] in words:
                     words[palabras[i+1]] += 1
+    close(texto)
     return words
                 
 def histograma(text): #siquesi
@@ -61,6 +66,7 @@ def histograma(text): #siquesi
     for x in lista:
         for y in lista:
             d[(x,y)] = palabra_despues_otra_cantidad(text, x, y)
+    
     return d
 
 def transicion(text, h): #siquesi
