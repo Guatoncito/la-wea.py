@@ -52,13 +52,13 @@ def palabra_despues_otra_posibilidades(text, p1): #siquesi
     a=''  
     for linea in texto:
         a+=(linea + ' ')
-    a=a.strip.split(' ')
+    a=a.strip().split(' ')
     for i in range(len(a)-1):
         if p1==a[i]:
-            if a[i] not in words:
-                words[a[i]]=1
+            if a[i+1] not in words:
+                words[a[i+1]]=1
             else:
-                words[a[i]]+=1
+                words[a[i+1]]+=1
     texto.close()
     return words
                 
