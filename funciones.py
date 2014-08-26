@@ -48,15 +48,17 @@ def palabra_despues_otra_cantidad(text, p1, p2): #siquesi
 
 def palabra_despues_otra_posibilidades(text, p1): #siquesi
     texto = open(text)
-    words = dict()   
+    words = dict() 
+    a=''  
     for linea in texto:
-        palabras = linea.strip().split()
-        for i in range(len(palabras)-1):
-            if palabras[i] == p1 and i != (len(palabras)-1):
-                if palabras[i+1] not in words:
-                    words[palabras[i+1]] = 1
-                elif palabras[i+1] in words:
-                    words[palabras[i+1]] += 1
+        a+=(linea + ' ')
+    a=a.strip.split(' ')
+    for i in range(len(a)-1):
+        if p1==a[i]:
+            if a[i] not in words:
+                words[a[i]]=1
+            else:
+                words[a[i]]+=1
     texto.close()
     return words
                 
